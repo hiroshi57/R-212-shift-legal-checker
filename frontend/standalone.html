@@ -861,7 +861,9 @@ function App() {
   const v = bad.length > 0 ? ["vbad", "🛑 法令違反の可能性がある勤務が見つかりました", "休憩不足・連続勤務は労働基準法に抵触する恐れがあります。該当者のシフトを至急見直してください。"] : total > 0 ? ["vmid", "⚠ 改善が必要な点が" + total + "件あります", "直ちに違法ではありませんが、健康確保の観点から見直しを推奨します。"] : ["vgood", "✅ 問題は見つかりませんでした", "入力範囲では、休憩・連続勤務・勤務間インターバルに問題はありませんでした。"];
   return /*#__PURE__*/React.createElement("div", {
     className: "wrap"
-  }, /*#__PURE__*/React.createElement(DataBar, null), /*#__PURE__*/React.createElement("h1", null, "\u30B7\u30D5\u30C8\u306E\u6CD5\u4EE4\u30C1\u30A7\u30C3\u30AF"), /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement(DataBar, null), /*#__PURE__*/React.createElement("h1", null, "\u30B7\u30D5\u30C8\u306E\u6CD5\u4EE4\u30C1\u30A7\u30C3\u30AF"), !pro && /*#__PURE__*/React.createElement("p", {
+    style: { fontSize: 12.5, color: "#6b7280", margin: "0 0 12px" }
+  }, "\uD83C\uDD93 \u767B\u9332\u4E0D\u8981\u30FB", window.zenFreeLimit ? window.zenFreeLimit() : 3, "\u56DE\u307E\u3067\u7121\u6599\u3067\u304A\u8A66\u3057\u3044\u305F\u3060\u3051\u307E\u3059"), /*#__PURE__*/React.createElement("div", {
     className: "sub",
     style: {
       marginBottom: 10
